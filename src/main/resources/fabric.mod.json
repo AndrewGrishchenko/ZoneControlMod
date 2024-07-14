@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "zonecontrol",
+  "version": "${version}",
+  "name": "ZoneControl",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/andrew/ZoneControl"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/zonecontrol/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "org.ap6y3ep.zonecontrol.client.ZoneControlClient"
+    ],
+    "main": [
+      "org.ap6y3ep.zonecontrol.ZoneControl"
+    ]
+  },
+  "mixins": [
+    "zonecontrol.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
