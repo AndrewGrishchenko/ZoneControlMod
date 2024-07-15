@@ -8,7 +8,6 @@ import org.ap6y3ep.zonecontrol.command.*;
 public class ZoneControl implements ModInitializer {
     @Override
     public void onInitialize() {
-        System.out.println("Hello from Fabric mod!");
         PlayerEnterZoneCallback.EVENT.register(this::onPlayerEnterZone);
         registerCommands();
     }

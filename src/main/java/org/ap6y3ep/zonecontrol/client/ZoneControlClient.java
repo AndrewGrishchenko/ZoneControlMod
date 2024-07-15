@@ -7,7 +7,5 @@ import net.fabricmc.api.Environment;
 @Environment(EnvType.CLIENT)
 public class ZoneControlClient implements ClientModInitializer {
     @Override
-    public void onInitializeClient() {
-        System.out.println("Hello Fabric client mod!");
-    }
+    public void onInitializeClient() { }
 }
