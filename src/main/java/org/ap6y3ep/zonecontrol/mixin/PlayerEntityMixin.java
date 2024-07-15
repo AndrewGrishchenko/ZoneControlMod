@@ -26,10 +26,7 @@ public abstract class PlayerEntityMixin {
 
         ZoneStorage storage = ZoneStorage.get((ServerWorld) player.getWorld());
 
-        if (storage.getZones().values().stream().anyMatch((box ->
-                box.minX <= playerPos.x && playerPos.x <= box.maxX + 1
-                && box.minY <= playerPos.y && playerPos.y <= box.maxY + 1
-                && box.minZ <= playerPos.z && playerPos.z <= box.maxZ + 1))) {
+        if (storage.isInZone(playerPos)) {
             boolean canEnter = PlayerEnterZoneCallback.EVENT.invoker().onPlayerEnterZone(player);
 
             if (!canEnter) {
